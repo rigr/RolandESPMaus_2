@@ -1,10 +1,7 @@
 # main/idf_component.yml
-# Use local IDF bt core and local components/esp_hid
+# Simplified dependencies: rely on IDF's 'bt' component and local 'esp_hid' component
 dependencies:
   idf:
     version: ">=4.4.0,<5.0.0"
-  bt:
-    path: "${IDF_PATH}/components/bt"
-  esp_hid:
-    path: "${CMAKE_SOURCE_DIR}/components/esp_hid"
-
+  bt: {}
+  esp_hid: {}
