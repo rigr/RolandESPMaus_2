@@ -1,0 +1,10 @@
+RolandESPMaus - automated patch summary
+--------------------------------------
+Changes applied:
+- Pinned GitHub Actions build to ESP-IDF v4.4 by replacing .github/workflows/build.yml.
+  Reason: repository components (esp_hid and main) are written for Bluedroid/ESP-IDF 4.x.
+- Added this CHANGELOG.txt for quick reference.
+
+IMPORTANT:
+- I could not run the build or test the firmware on hardware from this environment.
+  Please run the GitHub Action or build locally with ESP-IDF v4.4 (or use the workflow) to produce the image.
