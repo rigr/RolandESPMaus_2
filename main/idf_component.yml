@@ -1,7 +1,14 @@
 # main/idf_component.yml
-# Simplified dependencies: rely on IDF's 'bt' component and local 'esp_hid' component
+# Fixed to use correct manifest syntax for ESP-IDF v4.4
+
 dependencies:
   idf:
     version: ">=4.4.0,<5.0.0"
-  bt: {}
-  esp_hid: {}
+
+  # Use built-in classic Bluetooth stack from IDF
+  bt:
+    public: true
+
+  # Use local esp_hid component shipped within the repo
+  esp_hid:
+    path: "../components/esp_hid"
