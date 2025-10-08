@@ -1,0 +1,5 @@
+version: "1.0.0"
+description: "Legacy HID host (compatible with IDF 4.4.x)"
+dependencies:
+  idf:
+    version: ">=4.4.0,<5.0.0"
