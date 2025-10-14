@@ -20,11 +20,12 @@ jobs:
       - name: Set up ESP-IDF environment
         uses: espressif/esp-idf-ci-action@v1
         with:
-          esp_idf_version: v4.4
+          esp_idf_version: v5.1.2
           target: esp32
 
       - name: Build project
         run: |
+          . $IDF_PATH/export.sh
           idf.py set-target esp32
           idf.py reconfigure
           idf.py build
@@ -32,7 +33,7 @@ jobs:
       - name: Upload firmware artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: RolandESPMaus_firmware
+          name: RolandESPMaus-Firmware
           path: |
             build/*.bin
             build/*.elf
